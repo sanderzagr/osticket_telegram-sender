@@ -12,7 +12,6 @@ require_once('config.php');
 
 class TelegramPlugin extends Plugin {
     var $config_class = 'TelegramPluginConfig';
-//Aleks private $tgurl = "https://api.telegram.org/bot6654298086:AAHubLB3j_trBYOflW_vFtqFHGlSyC3MRKM/sendMessage";
 private $chatid;
 private $count = 1;
 
@@ -164,7 +163,6 @@ global $debug;
 
 //            $url = $this->getConfig()->get('tgURL');
 
-//Aleks       $ch = curl_init("https://api.telegram.org/bot6654298086:AAHubLB3j_trBYOflW_vFtqFHGlSyC3MRKM/sendMessage");
 $ch = curl_init($tgurl."/sendMessage");
 //            curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
             curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);
